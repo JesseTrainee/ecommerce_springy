@@ -19,7 +19,7 @@
 $baseDir = dirname(__DIR__);
 
 return [
-    'SYSTEM_NAME' => 'Your system name',
+    'SYSTEM_NAME' => 'Book Ecommerce',
     'SYSTEM_VERSION' => [1, 0, 0],
     'PROJECT_CODE_NAME' => '',
 

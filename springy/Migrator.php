@@ -216,6 +216,8 @@ class Migrator extends DB
     {
         $args = getopt('hsmr', ['help', 'revision:']);
 
+        $this->output('aq'. implode(',', $args));
+
         if ($this->validateArgument($args, ['m'], true)) {
             $this->command = 'migrate';
         }
@@ -282,7 +284,7 @@ class Migrator extends DB
         $this->output('');
         $this->output('List of commands:');
         $this->output('  -h, --help     show this help instructions. D\'oh!');
-        $this->output('  -m             start the migtration process.');
+        $this->output('  -m             start the migration process.');
         $this->output('  -r             start the rollback process.');
         $this->output('  -s             show the current status of revisions.');
         $this->output('');

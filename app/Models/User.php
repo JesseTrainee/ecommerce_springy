@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Example model.
+ * User model.
  */
 
 namespace App\Models;

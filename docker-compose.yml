@@ -17,7 +17,6 @@ services:
       - springy-network
     depends_on:
       - mysql
-      - redis
 
   # Servidor Web Nginx
   nginx:
@@ -57,19 +56,6 @@ services:
     ports:
       - "3306:3306"
 
-  # Serviço Redis para Cache
-  redis:
-    image: redis:6-alpine
-    container_name: springy-redis
-    restart: unless-stopped
-    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD}
-    volumes:
-      - springy-redis-data:/data
-    networks:
-      - springy-network
-    ports:
-      - "6379:6379"
-
   # Serviço phpMyAdmin (opcional)
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -93,6 +79,4 @@ networks:
 
 volumes:
   springy-mysql-data:
-    driver: local
-  springy-redis-data:
     driver: local
