@@ -1,0 +1,19 @@
+# docker-compose.override.yml para desenvolvimento
+services:
+  app:
+    volumes:
+      - ./:/var/www
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
+      XDEBUG_MODE: develop,debug
+      XDEBUG_CONFIG: client_host=host.docker.internal client_port=9003
+
+  nginx:
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+
+  mysql:
+    ports:
+      - "3306:3306"
