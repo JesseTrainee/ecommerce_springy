@@ -8,9 +8,12 @@ namespace App\Web;
 
 use Springy\Controller;
 
-class Index extends Controller
+class Test extends Controller
 {
     public function __invoke()
     {
+        dd('sadasd');
+        $this->createTemplate();
+        $this->template->display();
     }
 }

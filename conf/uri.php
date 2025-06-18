@@ -37,10 +37,9 @@ $conf = [
          */
         'hosts' => [
             'localhost\.localdomain' => [
-                'module' => 'local',
-                'namespace' => 'App\\Local\\Web',
+                'namespace' => 'App\\Web',
                 'segments' => [
-                    'api' => 'App\\Local\\Api',
+                    'api' => 'App\\Api',
                 ],
                 'template' => ['$admin'],
             ],

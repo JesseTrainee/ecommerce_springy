@@ -54,7 +54,6 @@ RUN chown -R $user:$user /var/www
 RUN mkdir -p /var/www/storage /var/www/var
 RUN chmod -R 755 /var/www/storage /var/www/var
 
-
 # Define o usuário
 USER $user
 
